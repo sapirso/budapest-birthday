@@ -355,20 +355,168 @@
             text-align: center;
             color: #fff;
         }
+        .confetti-piece {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #FFD700;
+            animation: confetti-fall 4s linear infinite;
+            border-radius: 2px;
+        }
+        .confetti-piece:nth-child(odd) {
+            background: #FF69B4;
+            animation-delay: -1s;
+        }
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        @media (max-height: 600px) {
+            #welcomeScreen h1 {
+                font-size: 1.8rem !important;
+                margin-bottom: 15px !important;
+            }
+            #welcomeScreen p {
+                font-size: 1rem !important;
+                margin-bottom: 20px !important;
+            }
+            #welcomeScreen ul {
+                font-size: 0.9rem !important;
+            }
+            #welcomeScreen button {
+                font-size: 1.1rem !important;
+                padding: 12px 35px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #welcomeScreen {
+                padding: 15px !important;
+            }
+            #welcomeScreen h1 {
+                font-size: 1.6rem !important;
+            }
+            #welcomeScreen p {
+                font-size: 0.95rem !important;
+            }
+        }
     </style>
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const confettiDiv = document.getElementById('welcomeConfetti');
+        if (confettiDiv) {
+            for (let i = 0; i < 40; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.animationDelay = Math.random() * 2 + 's';
+                confettiDiv.appendChild(piece);
+            }
+        }
+    });
+    </script>
 </head>
 <body>
+        
     <div class="container">
-        <div class="header">
-            <h1 class="main-title">🎂 יום הולדת 30 לאיילה בבודפשט! 🏰</h1>
+        <!-- הבר צריך להיות מחוץ לתחנות! -->
+        <div class="header" id="mainHeader" style="display: none;">
+            <h1 class="main-title">🎂 יום הולדת 30 בבודפשט! 🏰</h1>
             <p style="font-size: 1.3rem; color: #FF69B4; margin-bottom: 20px;">
-                ✨ 7 תחנות מדהימות ליום שלא תשכחו! ✨
+                ✨ 7 תחנות מדהימות ליום שלא תשכח! ✨
             </p>
             <div class="progress-container">
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressBar"></div>
                 </div>
-                <div class="progress-text" id="progressText">תחנה ראשונה</div>
+                <div class="progress-text" id="progressText">תחנה 1 מתוך 7</div>
+            </div>
+        </div>
+
+        <!-- עמוד הפתיחה -->
+        <div id="welcomeScreen" style="
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100vw; 
+            height: 100vh; 
+            background: rgba(0,0,0,0.95); 
+            z-index: 10000;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: flex-start; 
+            text-align: center;
+            padding: 60px 20px 20px 20px;
+            box-sizing: border-box;
+            overflow-y: auto;">
+
+            <div id="welcomeConfetti" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 10001;"></div>
+
+            <div style="max-width: 600px; width: 100%; margin: 0 auto;">
+                <h1 style="
+                    color: #FFD700; 
+                    font-size: 2rem; 
+                    margin-bottom: 20px; 
+                    text-shadow: 0 2px 20px #FF69B4;
+                    line-height: 1.2;
+                    margin-top: 0;">
+                    🎂 יום הולדת 30 לאיילה! 🎉
+                </h1>
+                
+                <p style="
+                    color: #FF69B4; 
+                    font-size: 1.1rem; 
+                    margin-bottom: 25px;
+                    line-height: 1.4;">
+                    מחכה לכם מסע קסום בבודפשט עם 7 תחנות חווייתיות, הפתעות, אוכל טוב והמון אהבה!<br>
+                    <span style="color: #FFD700; font-weight: bold; font-size: 1.1em; margin-top: 10px; display: block;">
+                        💌 שימו לב: יש מעטפה של כסף שעליכם להשתמש בה בשביל כל היום!
+                    </span>
+                </p>
+                
+                <div style="
+                    background: rgba(255,255,255,0.07); 
+                    border-radius: 15px; 
+                    padding: 20px; 
+                    margin-bottom: 25px;">
+                    <h3 style="color: #FFD700; margin-bottom: 12px; font-size: 1.2rem;">הוראות למסע:</h3>
+                    <ul style="
+                        color: #fff; 
+                        text-align: right; 
+                        font-size: 0.95rem; 
+                        line-height: 1.6; 
+                        direction: rtl; 
+                        list-style: disc inside;
+                        margin: 0;
+                        padding: 0;">
+                        <li style="margin-bottom: 5px;">בכל תחנה תקבלו משימה או חוויה – בצעו אותה ולחצו "סיימתי כאן".</li>
+                        <li style="margin-bottom: 5px;">השתמשו במעטפה הכסף לכל מה שצריך במהלך היום.</li>
+                        <li style="margin-bottom: 5px;">קראו היטב את ההסברים, הטיפים והכתובות.</li>
+                        <li style="margin-bottom: 5px;">צלמו, תיהנו, ותשתפו את החוויות!</li>
+                        <li>בסיום כל התחנות מחכה לכם הפתעה חגיגית 🎊</li>
+                    </ul>
+                </div>
+                
+                <button onclick="startBirthday()" style="
+                    background: linear-gradient(45deg, #FFD700, #FF69B4); 
+                    color: #222; 
+                    font-weight: bold; 
+                    font-size: 1.2rem;
+                    padding: 15px 40px; 
+                    border: none; 
+                    border-radius: 30px; 
+                    cursor: pointer; 
+                    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+                    transition: all 0.3s ease;">
+                    🚀 התחלו את המסע!
+                </button>
             </div>
         </div>
 
@@ -419,7 +567,6 @@
                 <div class="station-status status-locked">🔒 נפתח לאחר סיום התחנה הקודמת</div>
                 <div class="station-time">10:30 - 13:30</div>
                 
-                <!-- כאן מוסיפים את המידע המפורט -->
                 <div class="station-content">
                     <h3 class="section-title-pink">סיור להכרת העיר 🗺️</h3>
                     <p class="explanation-text">
@@ -632,7 +779,18 @@
         let currentStation = 1;
         let completedStations = [];
         const totalStations = 7;
+        
 
+        function startBirthday() {
+            document.getElementById('welcomeScreen').style.display = 'none';
+            
+            document.getElementById('mainHeader').style.display = 'block';
+            
+            document.getElementById('station1').classList.add('active');
+            
+            updateProgress();
+        }
+        
         function updateProgress() {
             const progressBar = document.getElementById('progressBar');
             const progressText = document.getElementById('progressText');
@@ -678,7 +836,7 @@
                 }, 1500);
             } else {
                 setTimeout(() => {
-                    openNextStation(8); // מעבר לתחנה 8
+                    openNextStation(8); 
                 }, 1500);
             }
             updateProgress();
@@ -827,16 +985,13 @@
             
             document.querySelector('.container').appendChild(celebration);
             
-            
             showMiniCelebration();
         }
 
-       
         updateProgress();
     </script>
     <div id="customModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
         <div id="modalContent" style="background:#222; color:#FFD700; border-radius:20px; padding:40px 30px; max-width:350px; margin:auto; text-align:center; box-shadow:0 8px 40px #000;">
-        
         </div>
     </div>
 </body>
