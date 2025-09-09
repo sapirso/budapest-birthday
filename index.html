@@ -290,7 +290,18 @@
             background: #FF69B4;
             animation-delay: -1s;
         }
-
+        .content-yellow {
+            background: rgba(255, 215, 0, 0.15);
+            border: 2px solid #FFD700;
+        }
+        .content-pink {
+            background: rgba(255, 105, 180, 0.13);
+            border: 2px solid #FF69B4;
+        }
+        .content-green {
+            background: rgba(80, 250, 123, 0.13);
+            border: 2px solid #50fa7b;
+        }
         @keyframes confetti-fall {
             0% {
                 transform: translateY(-100vh) rotate(0deg);
@@ -300,6 +311,49 @@
                 transform: translateY(100vh) rotate(720deg);
                 opacity: 0;
             }
+        }
+        .address-link {
+            color: #FFD700;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 1.08rem;
+            letter-spacing: 0.5px;
+            direction: ltr;
+            word-break: break-all;
+        }
+
+        .section-title-yellow {
+            color: #FFD700;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            text-align: center;
+
+        }
+        .section-title-pink {
+            color: #FF69B4;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        .section-title-green {
+            color: #50fa7b;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            text-align: center;
+
+        }
+        .explanation-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #fff;
         }
     </style>
 </head>
@@ -328,18 +382,19 @@
                 <div class="station-time">08:30 - 10:00</div>
                 
                 <div class="station-content">
-                    <h3 style="color: #FFD700; margin-bottom: 15px;">🍯 בוקר יום הולדת מתוק</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;">
+                    <h3 class="section-title-pink">🍯 בוקר יום הולדת מתוק</h3>
+                    <p class="explanation-text">
                         התחילו את יום ההולדת עם ארוחת בוקר כשרה מפנקת במאפיה הטובה ביותר בבודפשט!
                     </p>
-                    
                     <div class="content-section">
-                        <strong>שם:</strong> UPTOWN KOSHER<br>
-                        <strong>🍽️ מה להזמין:</strong> קפה טרי, מאפה חם ומשהו מתוק לכבוד יום ההולדת<br>
-                        <strong>💡 כתובת:</strong>
-                        <a href="https://maps.google.com/?q=Nagy+Diófa+u.+4,+1072+Budapest,+Hungary" target="_blank" style="color:#FFD700; font-weight:bold; text-decoration:underline;">
-                           UpTown Kosher bakery - מאפייה כשרה 📍
+                     <strong>💡 כתובת:</strong>
+                        <a href="https://maps.google.com/?q=Nagy+Diófa+u.+4,+1072+Budapest,+Hungary" target="_blank" class="address-link">
+                           UpTown Kosher bakery מאפייה כשרה 📍
                         </a>
+                    </div>
+                    <div class="content-section content-green">
+                        <strong>🍽️ מה להזמין:</strong> קפה טרי, מאפה חם ומשהו מתוק לכבוד יום ההולדת<br>
+                       
                     </div>
                     
                     <div class="tips-section">
@@ -366,14 +421,21 @@
                 
                 <!-- כאן מוסיפים את המידע המפורט -->
                 <div class="station-content">
-                    <h3 style="color: #FFD700; margin-bottom: 15px;"> פרטי הסיור</h3>
-                    <p>נקודת מפגש: הגלגל ענק<br></p>
-                    <a href="https://maps.google.com/?q=Erzsébet+tér,+1051+Budapest,+Hungary" target="_blank" style="color:#FFD700; font-weight:bold; text-decoration:underline;">
-                        Ferris Wheel of Budapest - גלגל הענק 📍
-                        </a>
+                    <h3 class="section-title-pink">סיור להכרת העיר 🗺️</h3>
+                    <p class="explanation-text">
+                        המשיכו את היום בסיור רגלי להיכרות עם העיר בודפשט
+                    </p>
+                    
                     <div class="content-section">
+                     <strong>💡 כתובת:</strong>
+                        <a href="https://maps.google.com/?q=Erzsébet+tér,+1051+Budapest,+Hungary" target="_blank" class="address-link">
+                        Ferris Wheel of Budapest  גלגל הענק 📍
+                        </a>
+                    </div>
+                    <div class="content-section content-pink">
                         <strong>💡 טיפ:</strong> ממולץ להגיע 10 דקות לפני תחילת הסיור
                     </div>
+                    <h3 style="color: #FFD700; margin-bottom: 15px;"> פרטי הסיור</h3>
                     <ul style="margin-top:20px; direction:rtl; font-size:1.1rem;">
                         <li>הסיור יוצא מהגלגל הענק וממשיך לתוך הרובע הממשלתי</li>
                         <li>כיכר אליזבט והאקווריום – מרכז חיי הלילה של צעירי בודפשט</li>
@@ -405,16 +467,21 @@
                 <div class="station-status status-locked">🔒 נפתח לאחר הסיור</div>
                 <div class="station-time">13:45 - 14:45</div>
                 <div class="station-content">
-                    <strong>💡 כתובת:</strong>
-                  <a href="https://maps.google.com/?q=Fisherman's+Bastion,+Budapest,+1014+Hungary" target="_blank" style="color:#FFD700; font-weight:bold; text-decoration:underline;">
-                    Fisherman's Bastion - מצודת הדייגים  📍
-                </a>
+                    <h3 class="section-title-pink">תצפית יפה שממנה תוכלו לראות את העיר 🏰</h3>
+                    <p class="explanation-text">
+                        מקווה שיש לכם עוד כוח להליכה, כי מחכה לכם נוף מדהים!
+                    </p>
                     <div class="content-section">
-                        <p>🏰 מחכה לכם נוף מדהים! </p>
-                    </div>   
+                        <strong>💡 כתובת:</strong>
+                        <a href="https://maps.google.com/?q=Fisherman's+Bastion,+Budapest,+1014+Hungary" target="_blank" class="address-link">
+                            Fisherman's Bastion  מצודת הדייגים  📍
+                        </a>
+                    </div>
+                    <div class="content-section content-pink">
+                        <strong>🏰 מחכה לכם נוף מדהים!</strong>
+                    </div>
                 </div>
-                <div class="locked-message">
-                </div>
+                <div class="locked-message"></div>
             </div>
         </div>
 
@@ -427,18 +494,31 @@
                 <div class="station-status status-locked">🔒 בודפשט מהשמיים מחכה!</div>
                 <div class="station-time">15:00 - 16:00</div>
                 <div class="station-content">
-                    <strong>💡 כתובת:</strong>
-                    <a href="https://maps.google.com/?q=Erzsébet+tér,+1051+Budapest,+Hungary" target="_blank" style="color:#FFD700; font-weight:bold; text-decoration:underline;">
-                        Ferris Wheel of Budapest - גלגל הענק 📍
-                        </a>
+                    <h3 class="section-title-pink"> תהנו מסיבוב כייפי על הגלגל הענק🎡</h3>
+                    <p class="explanation-text">
+                        נוף פנורמי של העיר!
+                    </p>
                     <div class="content-section">
-                        <strong>💡 תזכורת:</strong> יש מעטפה של כסף בדיוק בשביל זה
+                     <strong>💡 כתובת:</strong>
+                        <a href="https://maps.google.com/?q=Erzsébet+tér,+1051+Budapest,+Hungary" target="_blank" class="address-link">
+                        Ferris Wheel of Budapest  גלגל הענק📍
+                        </a>
                     </div>
+            
+                    <div class="content-section content-pink">
+                        <strong>💡 תזכורת:</strong> יש מעטפה של כסף בדיוק בשביל זה!
+                    </div>
+                    <div class="content-section content-green">
+                        <strong>🎡 נוף פנורמי של העיר!</strong>
+                    </div>
+                </div>
+                <!-- locked-message צריך להיות כאן, מחוץ ל-station-content -->
                 <div class="locked-message">
                     <p>🎡 נוף פנורמי של העיר!</p>
                 </div>
             </div>
         </div>
+        <!-- ...existing code... -->
 
         <!-- תחנה 5: קניות -->
         <div class="station-container" id="station5">
@@ -446,9 +526,23 @@
                 <div class="station-number">5</div>
                 <div class="station-icon">🛍️</div>
                 <h2 class="station-title">קניות ברחוב ואצי</h2>
-                <div class="station-status status-locked">🔒 שופינג יום הולדת מחכה!</div>
+                <div class="station-status">לכם שופינג יום הולדת מחכה!</div>
                 <div class="station-time">16:15 - 17:45</div>
-                
+                <div class="station-content">
+                    <h3 class="section-title-pink">שופינג יום הולדת ברחוב ואצי 🛍️</h3>
+                    <p class="explanation-text">
+                        זה הזמן להתפנק, להסתובב בין החנויות, ולקנות מתנות לאנשים הכי חשובים (כולל לעצמך)!
+                    </p>
+                    <div class="content-section">
+                        <strong>💡 כתובת:</strong>
+                        <a href="https://maps.google.com/?q=Váci+St,+Budapest,+Hungary" target="_blank" class="address-link">
+                            Vaci Street - רחוב ואצי📍
+                        </a>
+                    </div>
+                    <div class="content-section content-pink">
+                        <strong>אל תשכחו לקנות כמה מתנות לאנשים חשובים !🛍️</strong>
+                    </div>
+                </div>
                 <div class="locked-message">
                     <p>🛍️ זמן לפנק את עצמך!</p>
                 </div>
@@ -456,14 +550,31 @@
         </div>
 
         <!-- תחנה 6: מסעדה -->
-        <div class="station-container" id="station6">
+       <div class="station-container" id="station6">
             <div class="station-card">
                 <div class="station-number">6</div>
-                <div class="station-icon">🍽️</div>
+                <div class="station-icon">🍽️</div>  
                 <h2 class="station-title">ארוחת ערב</h2>
                 <div class="station-status status-locked">🔒 ארוחה חגיגית מחכה!</div>
                 <div class="station-time">18:00 - 19:30</div>
-                
+                <div class="station-content">
+                    <h3 class="section-title-pink">🍽️ ארוחת ערב חגיגית במסעדה</h3>
+                    <p class="explanation-text">
+                        אחרי יום מלא הרפתקאות – מגיעה ארוחה טובה! בתיאבון 😛
+                    </p>
+                    <div class="content-section content-yellow">
+                        <strong>💡 כתובת:</strong>
+                        <a href="https://maps.google.com/?q=Dob+u.+32,+Budapest,+Hungary" target="_blank" class="address-link">
+                            nitavalo restaurant budapest📍
+                        </a>
+                    </div>
+                    <div class="content-section content-green">
+                        <strong>😛 תהנו מהאוכל !</strong>
+                    </div>
+                    <div class="content-section content-pink">
+                        <strong>💡 תזכורת:</strong> יש מעטפה של כסף בדיוק בשביל זה!
+                    </div>
+                </div>
                 <div class="locked-message">
                     <p>🍽️ ארוחת יום הולדת מפוארת!</p>
                 </div>
@@ -478,9 +589,40 @@
                 <h2 class="station-title">שיט בדנובה</h2>
                 <div class="station-status status-locked">🔒 סיום מושלם ליום!</div>
                 <div class="station-time">20:00 - 21:30</div>
-                
+                <div class="station-content">
+                    <h3 class="section-title-pink">⛵ סיום רומנטי על הדנובה</h3>
+                    <p class="explanation-text">
+                        שיט ערב קסום עם נופים מהממים של העיר המוארת – הדרך הכי יפה לסיים את היום!
+                    </p>
+                    <div class="content-section">
+                        <strong>💡 כתובת:</strong>
+                        <a href="https://maps.google.com/?q=Budapest,+Vigadó+tér+6,+1051+Hungary" target="_blank" class="address-link">
+                            שייט בדנובה📍
+                        </a>
+                    </div>
+                    <div class="content-section content-pink">
+                        <strong>⛵ הסיום הכי רומנטי!</strong>
+                    </div>
+                </div>
                 <div class="locked-message">
                     <p>⛵ הסיום הכי רומנטי!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="station-container" id="station8">
+            <div class="station-card">
+                <div class="station-number">🎉</div>
+                <div class="station-icon">🎊</div>
+                <h2 class="station-title">כל התחנות הושלמו!</h2>
+                <div class="station-status status-completed">🎂 מזל טוב איילה!</div>
+                <div class="station-content">
+                    <h3 class="section-title-yellow">🎈 סיימת בהצלחה את כל 7 התחנות!</h3>
+                    <p style="font-size:1.3rem; color:#FF69B4; text-align:center;">
+                        העשור החדש שלך התחיל בצורה הכי יפה שיש!<br>
+                        מאחלים לך המון אושר, בריאות, אהבה והרפתקאות חדשות!<br>
+                        🎂🎉🥳
+                    </p>
                 </div>
             </div>
         </div>
@@ -510,6 +652,10 @@
                 showPhotoModal();
                 return;
             }
+             if (stationNumber === 5) {
+                showGiftQuestion();
+                return;
+            }
             finishStationNormally(stationNumber);
         }
 
@@ -532,7 +678,7 @@
                 }, 1500);
             } else {
                 setTimeout(() => {
-                    showFinalCelebration();
+                    openNextStation(8); // מעבר לתחנה 8
                 }, 1500);
             }
             updateProgress();
@@ -552,11 +698,7 @@
         function photoAnswer(isYes) {
             const modal = document.getElementById('customModal');
             const content = document.getElementById('modalContent');
-            if (isYes) {
-                modal.style.display = 'none';
-                finishStationNormally(3);
-            } else {
-                content.innerHTML = `
+            content.innerHTML = `
                     <h3 style="margin-bottom:15px;">שלחו תמונה ל-<span style="color:#FF69B4;">מספר/קבוצה</span></h3>
                     <p style="margin-bottom:20px;">לאחר השליחה תקבלו קוד לפתיחת התחנה הבאה.</p>
                     <input id="codeInput" type="text" placeholder="הכניסו קוד כאן" style="padding:10px; border-radius:10px; border:none; width:80%; margin-bottom:15px; font-size:1.1rem; text-align:center;">
@@ -564,13 +706,38 @@
                     <button onclick="checkCode()" style="margin-top:10px; padding:10px 30px; border-radius:20px; border:none; background:linear-gradient(45deg,#FFD700,#FF69B4); color:#222; font-weight:bold; font-size:1.1rem; cursor:pointer;">בדוק קוד</button>
                     <div id="codeError" style="color:#FF69B4; margin-top:10px; min-height:24px;"></div>
                 `;
-            }
+           
+        }
+        function showGiftQuestion() {
+            const modal = document.getElementById('customModal');
+            const content = document.getElementById('modalContent');
+            content.innerHTML = `
+                <h2 style="margin-bottom:20px;">🎁 קניתם מתנה לאדם הכי חשוב?</h2>
+                <button onclick="giftAnswer(true)" style="margin:10px; padding:10px 30px; border-radius:20px; border:none; background:linear-gradient(45deg,#50fa7b,#45b7d1); color:#222; font-weight:bold; font-size:1.1rem; cursor:pointer;">כן</button>
+                <button onclick="giftAnswer(false)" style="margin:10px; padding:10px 30px; border-radius:20px; border:none; background:linear-gradient(45deg,#FFD700,#FF69B4); color:#222; font-weight:bold; font-size:1.1rem; cursor:pointer;">לא</button>
+                <div id="giftError" style="color:#FF69B4; margin-top:10px; min-height:24px;"></div>
+            `;
+            modal.style.display = 'flex';
         }
 
+        function giftAnswer(isYes) {
+            const modal = document.getElementById('customModal');
+            const content = document.getElementById('modalContent');
+            if (isYes) {
+                modal.style.display = 'none';
+                finishStationNormally(5);
+            } else {
+                content.innerHTML = `
+                    <h3 style="margin-bottom:15px;">😅 תחזרו לקניות!</h3>
+                    <p style="margin-bottom:20px;">רק אחרי שתקנו מתנה לאדם הכי חשוב אפשר להמשיך.</p>
+                    <button onclick="showGiftQuestion()" style="margin-top:10px; padding:10px 30px; border-radius:20px; border:none; background:linear-gradient(45deg,#FFD700,#FF69B4); color:#222; font-weight:bold; font-size:1.1rem; cursor:pointer;">עכשיו קניתי!</button>
+                `;
+            }
+        }
         function checkCode() {
             const code = document.getElementById('codeInput').value.trim();
             const errorDiv = document.getElementById('codeError');
-            const correctCode = "AYALA30"; // אפשר לשנות לקוד שרוצים
+            const correctCode = "Ayala30"; 
 
             if (code === correctCode) {
                 document.getElementById('customModal').style.display = 'none';
@@ -579,59 +746,25 @@
                 errorDiv.textContent = "הקוד שגוי. נסו שוב!";
             }
         }
-        // function completeStation(stationNumber) {
-        //     // סמן את התחנה כמושלמת
-        //     completedStations.push(stationNumber);
-            
-        //     // עדכן את המצב של התחנה הנוכחית
-        //     const currentStationElement = document.getElementById(`station${stationNumber}`);
-        //     const statusElement = currentStationElement.querySelector('.station-status');
-        //     statusElement.className = 'station-status status-completed';
-        //     statusElement.innerHTML = '✅ הושלם בהצלחה!';
-            
-        //     // הסתר את הכפתור
-        //     const button = currentStationElement.querySelector('.btn');
-        //     button.style.display = 'none';
-            
-        //     // הוסף חגיגה
-        //     showMiniCelebration();
-            
-        //     // פתח את התחנה הבאה
-        //     if (stationNumber < totalStations) {
-        //         setTimeout(() => {
-        //             openNextStation(stationNumber + 1);
-        //         }, 1500);
-        //     } else {
-        //         // אם זו התחנה האחרונה
-        //         setTimeout(() => {
-        //             showFinalCelebration();
-        //         }, 1500);
-        //     }
-            
-        //     updateProgress();
-        // }
 
         function openNextStation(stationNumber) {
             currentStation = stationNumber;
             
-            // הסתר את כל התחנות
             document.querySelectorAll('.station-container').forEach(station => {
                 station.classList.remove('active');
             });
             
-            // הצג את התחנה החדשה
             const nextStation = document.getElementById(`station${stationNumber}`);
             nextStation.classList.add('active');
             
-            // עדכן את מצב התחנה החדשה
             const statusElement = nextStation.querySelector('.station-status');
-            statusElement.className = 'station-status status-current';
-            statusElement.innerHTML = '🟢 תחנה פעילה - זמן להמשיך!';
+            if (stationNumber !== 8 && statusElement) {
+                statusElement.className = 'station-status status-current';
+                statusElement.innerHTML = '🟢 תחנה פעילה - זמן להמשיך!';
+            }
             
-            // הוסף תוכן מלא לתחנה (נוסיף בהמשך)
             addStationContent(stationNumber);
             
-            // גלול למעלה
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -640,10 +773,8 @@
             const lockedMessage = station.querySelector('.locked-message');
             
             if (lockedMessage) {
-                // הסר את ההודעה הנעולה
                 lockedMessage.remove();
                 
-                // הוסף תוכן מלא (נוסיף תוכן מפורט לכל תחנה)
                 addDetailedContent(stationNumber);
             }
         }
@@ -652,7 +783,6 @@
             const station = document.getElementById(`station${stationNumber}`);
             const card = station.querySelector('.station-card');
             
-            // תוכן בסיסי לכל תחנה (נרחיב בהמשך)
             const content = `
              
                 
@@ -667,7 +797,6 @@
         }
 
         function showMiniCelebration() {
-            // יצירת קונפטי קטן
             const confetti = document.createElement('div');
             confetti.className = 'confetti';
             document.body.appendChild(confetti);
@@ -698,16 +827,16 @@
             
             document.querySelector('.container').appendChild(celebration);
             
-            // קונפטי גדול
+            
             showMiniCelebration();
         }
 
-        // התחלה
+       
         updateProgress();
     </script>
     <div id="customModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
         <div id="modalContent" style="background:#222; color:#FFD700; border-radius:20px; padding:40px 30px; max-width:350px; margin:auto; text-align:center; box-shadow:0 8px 40px #000;">
-        <!-- תוכן דינאמי ייכנס כאן -->
+        
         </div>
     </div>
 </body>
