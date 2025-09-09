@@ -493,13 +493,13 @@
                         margin: 0;
                         padding: 0;">
                         <li style="margin-bottom: 5px;">בכל תחנה תקבלו משימה או חוויה – בצעו אותה ולחצו "סיימתי כאן".</li>
-                        <li style="margin-bottom: 5px;">השתמשו במעטפה הכסף לכל מה שצריך במהלך היום.</li>
+                        <li style="margin-bottom: 5px;">השתמשו במעטפת הכסף לכל מה שצריך במהלך היום.</li>
                         <li style="margin-bottom: 5px;">קראו היטב את ההסברים, הטיפים והכתובות.</li>
-                        <li style="margin-bottom: 5px;">צלמו, תיהנו, ותשתפו את החוויות!</li>
+                        <li style="margin-bottom: 5px;">צלמו, תיהנו, ושתפו את החוויות!</li>
                     </ul>
                 </div>
                 <span style="color: #FFD700; font-weight: bold; font-size: 0.8em; margin-top: 10px; display: block; margin-bottom: 30px;">
-                        💌 שימו לב: יש מעטפה של כסף שעליכם להשתמש בה בשביל כל היום!
+                        💌 שימו לב: יש מעטפה עם כרטיס אשראי שעליכם להשתמש בו בשביל כל היום!
                 </span>
                 <button onclick="startBirthday()" style="
                     background: linear-gradient(45deg, #FFD700, #FF69B4); 
@@ -646,7 +646,7 @@
                     </div>
             
                     <div class="content-section content-pink">
-                        <strong>💡 תזכורת:</strong> יש מעטפה של כסף בדיוק בשביל זה!
+                        <strong>💡 תזכורת:</strong> יש כרטיס בדיוק בשביל זה!
                     </div>
                     <div class="content-section content-green">
                         <strong>🎡 נוף פנורמי של העיר!</strong>
@@ -709,7 +709,7 @@
                         <strong>😛 תהנו מהאוכל !</strong>
                     </div>
                     <div class="content-section content-pink">
-                        <strong>💡 תזכורת:</strong> יש מעטפה של כסף בדיוק בשביל זה!
+                        <strong>💡 תזכורת:</strong> יש כרטיס בדיוק בשביל זה!
                     </div>
                 </div>
                 <div class="locked-message">
@@ -825,7 +825,7 @@
                 }, 1500);
             } else {
                 setTimeout(() => {
-                    openNextStation(8);
+                    openNextStation(8); 
                 }, 1500);
             }
             updateProgress();
@@ -846,7 +846,7 @@
             const modal = document.getElementById('customModal');
             const content = document.getElementById('modalContent');
             content.innerHTML = `
-                    <h3 style="margin-bottom:15px;">שלחו תמונה ל-<span style="color:#FF69B4;">מספר/קבוצה</span></h3>
+                    <h3 style="margin-bottom:15px;">שלחו תמונה ל-<span style="color:#FF69B4;">המשפחה הכי הכי</span></h3>
                     <p style="margin-bottom:20px;">לאחר השליחה תקבלו קוד לפתיחת התחנה הבאה.</p>
                     <input id="codeInput" type="text" placeholder="הכניסו קוד כאן" style="padding:10px; border-radius:10px; border:none; width:80%; margin-bottom:15px; font-size:1.1rem; text-align:center;">
                     <br>
@@ -944,7 +944,6 @@
         }
 
         function showMiniCelebration() {
-            // יצירת קונפטי קטן
             const confetti = document.createElement('div');
             confetti.className = 'confetti';
             document.body.appendChild(confetti);
