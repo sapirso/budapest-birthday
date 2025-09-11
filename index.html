@@ -482,7 +482,7 @@
                     border-radius: 15px; 
                     padding: 20px; 
                     margin-bottom: 25px;">
-                    <h3 style="color: #FFD700; margin-bottom: 12px; font-size: 1.2rem;">הוראות למסע:</h3>
+                    <h3 style="color: #FFD700; margin-bottom: 12px; font-size: 1.2rem;">  הוראות למסע של יעקב ואיילה:</h3>
                     <ul style="
                         color: #fff; 
                         text-align: right; 
@@ -492,7 +492,7 @@
                         list-style: disc inside;
                         margin: 0;
                         padding: 0;">
-                        <li style="margin-bottom: 5px;">בכל תחנה תקבלו משימה או חוויה – בצעו אותה ולחצו "סיימתי כאן".</li>
+                        <li style="margin-bottom: 5px;">בכל תחנה תקבלו משימה או חוויה – בצעו אותה ולחצו "סיימנו כאן".</li>
                         <li style="margin-bottom: 5px;">השתמשו במעטפת הכסף לכל מה שצריך במהלך היום.</li>
                         <li style="margin-bottom: 5px;">קראו היטב את ההסברים, הטיפים והכתובות.</li>
                         <li style="margin-bottom: 5px;">צלמו, תיהנו, ושתפו את החוויות!</li>
@@ -523,7 +523,7 @@
                 <div class="station-number">1</div>
                 <div class="station-icon">🥐</div>
                 <h2 class="station-title">מאפיית UPTOWN KOSHER</h2>
-                <div class="station-status status-current">🟢 תחנה פעילה - בואי נתחיל!</div>
+                <div class="station-status status-current">🟢 תחנה פעילה - בואו נתחיל!</div>
                 <div class="station-time">08:30 - 10:00</div>
                 
                 <div class="station-content">
@@ -549,7 +549,7 @@
                 
                 <div class="action-buttons">
                     <button class="btn btn-complete" onclick="completeStation(1)">
-                        ✅ סיימתי במאפייה - בואו נמשיך!
+                        ✅ סיימנו במאפייה - בואו נמשיך!
                     </button>
                 </div>
             </div>
@@ -576,7 +576,7 @@
                         </a>
                     </div>
                     <div class="content-section content-pink">
-                        <strong>💡 טיפ:</strong> ממולץ להגיע 10 דקות לפני תחילת הסיור
+                        <strong>💡 טיפ:</strong> מומלץ להגיע 10 דקות לפני תחילת הסיור
                     </div>
                     <h3 style="color: #FFD700; margin-bottom: 15px;"> פרטי הסיור</h3>
                     <ul style="margin-top:20px; direction:rtl; font-size:1.1rem;">
@@ -706,7 +706,7 @@
                         </a>
                     </div>
                     <div class="content-section content-green">
-                        <strong>😛 תהנו מהאוכל !</strong>
+                        <strong>😛 בתאבון, תהנו מהאוכל !</strong>
                     </div>
                     <div class="content-section content-pink">
                         <strong>💡 תזכורת:</strong> יש כרטיס בדיוק בשביל זה!
@@ -722,13 +722,13 @@
             <div class="station-card">
                 <div class="station-number">7</div>
                 <div class="station-icon">⛵</div>
-                <h2 class="station-title">שיט בדנובה</h2>
+                <h2 class="station-title">שייט בדנובה</h2>
                 <div class="station-status status-locked">🔒 סיום מושלם ליום!</div>
                 <div class="station-time">20:00 - 21:30</div>
                 <div class="station-content">
-                    <h3 class="section-title-pink">⛵ סיום רומנטי על הדנובה</h3>
+                    <h3 class="section-title-pink">⛵ סיום רומנטי בשייט בדנובה</h3>
                     <p class="explanation-text">
-                        שיט ערב קסום עם נופים מהממים של העיר המוארת – הדרך הכי יפה לסיים את היום!
+                        שייט ערב קסום עם נופים מהממים של העיר המוארת – הדרך הכי יפה לסיים את היום!
                     </p>
                     <div class="content-section">
                         <strong>💡 כתובת:</strong>
@@ -753,7 +753,7 @@
                 <h2 class="station-title">כל התחנות הושלמו!</h2>
                 <div class="station-status status-completed">🎂 מזל טוב איילה!</div>
                 <div class="station-content">
-                    <h3 class="section-title-yellow">🎈 סיימת בהצלחה את כל 7 התחנות!</h3>
+                    <h3 class="section-title-yellow">🎈 סיימתם בהצלחה את כל 7 התחנות!</h3>
                     <p style="font-size:1.3rem; color:#FF69B4; text-align:center;">
                         העשור החדש שלך התחיל בצורה הכי יפה שיש!<br>
                         מאחלים לך המון אושר, בריאות, אהבה והרפתקאות חדשות!<br>
@@ -909,7 +909,9 @@
                 statusElement.className = 'station-status status-current';
                 statusElement.innerHTML = '🟢 תחנה פעילה - זמן להמשיך!';
             }
-            
+            if (stationNumber === 8) {
+                showFinalFireworks();
+            }
             addStationContent(stationNumber);
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -935,7 +937,7 @@
                 
                 <div class="action-buttons">
                     <button class="btn btn-complete" onclick="completeStation(${stationNumber})">
-                        ✅ סיימתי כאן - בואו נמשיך!
+                        ✅ סיימנו כאן - בואו נמשיך!
                     </button>
                 </div>
             `;
@@ -958,23 +960,139 @@
             
             setTimeout(() => confetti.remove(), 3000);
         }
+         
+        function showFinalFireworks() {
+            function createContinuousConfetti() {
+                const bigConfetti = document.createElement('div');
+                bigConfetti.className = 'confetti';
+                bigConfetti.style.zIndex = '10000';
+                document.body.appendChild(bigConfetti);
+                
+                for (let i = 0; i < 50; i++) {
+                    const piece = document.createElement('div');
+                    piece.className = 'confetti-piece';
+                    piece.style.left = Math.random() * 100 + '%';
+                    piece.style.animationDelay = Math.random() * 2 + 's';
+                    piece.style.animationDuration = (Math.random() * 2 + 4) + 's';
+                    
+                    const size = Math.random() * 12 + 8;
+                    piece.style.width = size + 'px';
+                    piece.style.height = size + 'px';
+                    
+                    const colors = ['#FFD700', '#FF69B4', '#50fa7b', '#45b7d1', '#ff6b6b', '#feca57', '#ff9ff3', '#54a0ff'];
+                    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    
+                    bigConfetti.appendChild(piece);
+                }
+                
+                setTimeout(() => {
+                    bigConfetti.remove();
+                    createContinuousConfetti(); 
+                }, 6000);
+            }
+            
+            function createSingleFirework() {
+                const firework = document.createElement('div');
+                firework.className = 'confetti';
+                firework.style.zIndex = '10001';
+                document.body.appendChild(firework);
+                
+                const centerX = Math.random() * 60 + 20;
+                const centerY = Math.random() * 40 + 20;
+                
+                for (let k = 0; k < 60; k++) {
+                    const spark = document.createElement('div');
+                    spark.className = 'confetti-piece';
+                    
+                    spark.style.left = centerX + '%';
+                    spark.style.top = centerY + '%';
+                    spark.style.animationDelay = '0s';
+                    spark.style.animationDuration = '3s';
+                    spark.style.width = '6px';
+                    spark.style.height = '6px';
+                    
+                    const sparkColors = ['#FFD700', '#FF69B4', '#50fa7b', '#ff6b6b', '#54a0ff', '#ff9ff3'];
+                    spark.style.background = sparkColors[Math.floor(Math.random() * sparkColors.length)];
+                    spark.style.boxShadow = `0 0 8px ${spark.style.background}`;
+                    
+                    firework.appendChild(spark);
+                }
+                
+                setTimeout(() => firework.remove(), 3000);
+            }
+            
+            function continuousFireworks() {
+                createSingleFirework();
+                
+                const nextFireworkDelay = Math.random() * 2000 + 1000;
+                setTimeout(continuousFireworks, nextFireworkDelay);
+            }
+            
+            createContinuousConfetti(); 
+            setTimeout(continuousFireworks, 1000); 
+        }
 
-        function showFinalCelebration() {
-            const celebration = document.createElement('div');
-            celebration.className = 'celebration';
-            celebration.innerHTML = `
-                <h2 style="color: #FFD700; font-size: 2.5rem; margin-bottom: 20px;">
-                    🎊 מזל טוב! יום הולדת 30 מושלם! 🎊
-                </h2>
-                <p style="font-size: 1.3rem; color: #FF69B4;">
-                    סיימת בהצלחה את כל 7 התחנות!<br>
-                    העשור החדש שלך התחיל בצורה הכי יפה שיש! ✨
-                </p>
-            `;
+        function showFinalFireworks() {
+            const bigConfetti = document.createElement('div');
+            bigConfetti.className = 'confetti';
+            bigConfetti.style.zIndex = '10000';
+            document.body.appendChild(bigConfetti);
             
-            document.querySelector('.container').appendChild(celebration);
+            for (let i = 0; i < 150; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.animationDelay = Math.random() * 4 + 's';
+                piece.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                
+                const size = Math.random() * 12 + 8;
+                piece.style.width = size + 'px';
+                piece.style.height = size + 'px';
+                
+                const colors = ['#FFD700', '#FF69B4', '#50fa7b', '#45b7d1', '#ff6b6b', '#feca57', '#ff9ff3', '#54a0ff'];
+                piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+                
+                bigConfetti.appendChild(piece);
+            }
             
-            showMiniCelebration();
+            setTimeout(() => bigConfetti.remove(), 10000);
+            
+            setTimeout(() => {
+                for (let j = 0; j < 5; j++) {
+                    setTimeout(() => {
+                        const firework = document.createElement('div');
+                        firework.className = 'confetti';
+                        firework.style.zIndex = '10001';
+                        document.body.appendChild(firework);
+                        
+                        const centerX = Math.random() * 60 + 20; // בין 20% ל-80%
+                        const centerY = Math.random() * 40 + 20; // בין 20% ל-60%
+                        
+                        for (let k = 0; k < 60; k++) {
+                            const spark = document.createElement('div');
+                            spark.className = 'confetti-piece';
+                            
+                            const angle = (k / 60) * 360;
+                            const distance = Math.random() * 15 + 5;
+                            
+                            spark.style.left = centerX + '%';
+                            spark.style.top = centerY + '%';
+                            spark.style.animationDelay = '0s';
+                            spark.style.animationDuration = '3s';
+                            spark.style.width = '6px';
+                            spark.style.height = '6px';
+                            
+                            const sparkColors = ['#FFD700', '#FF69B4', '#50fa7b', '#ff6b6b', '#54a0ff', '#ff9ff3'];
+                            spark.style.background = sparkColors[Math.floor(Math.random() * sparkColors.length)];
+                            spark.style.boxShadow = `0 0 8px ${spark.style.background}`;
+                            
+                            firework.appendChild(spark);
+                        }
+                        
+                        setTimeout(() => firework.remove(), 3000);
+                    }, j * 800); 
+                }
+            }, 1000);
         }
 
         updateProgress();
